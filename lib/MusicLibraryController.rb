@@ -54,7 +54,7 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     num = gets.strip.to_i - 1
     binding.pry
-    #puts "Playing #{Song.all[num].name}"
+    #puts "Playing #{self.list_songs[num].name}"
   end
 
 
