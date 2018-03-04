@@ -52,8 +52,8 @@ class MusicLibraryController
 
   def play_song
     puts "Which song number would you like to play?"
-    num = gets.strip.to_i - 1
-    puts "Playing #{list_songs[num].artist.name}"
+    num = gets.strip.to_i
+    puts "Playing #{Song.all[num].artist.name}"
   end
 
 
