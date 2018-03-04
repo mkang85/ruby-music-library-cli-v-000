@@ -24,6 +24,7 @@ class MusicLibraryController
   end
 
   def list_songs
+    binding.pry
     Song.all.sort {|x,y| x.name <=> y.name}.each_with_index {|val, index| puts "#{index + 1}. #{val.artist.name} - #{val.name} - #{val.genre.name}" }
   end
 
@@ -53,7 +54,6 @@ class MusicLibraryController
   def play_song
     puts "Which song number would you like to play?"
     num = gets.strip
-    binding.pry
     self.list_songs
   end
 
