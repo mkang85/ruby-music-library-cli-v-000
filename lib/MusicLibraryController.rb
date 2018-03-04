@@ -53,6 +53,7 @@ class MusicLibraryController
   def play_song
     puts "Which song number would you like to play?"
     num = gets.strip
+    binding.pry
     self.list_songs.each {|x| x.split(' - ')}
   end
 
