@@ -6,7 +6,7 @@ class MusicLibraryController
     MusicImporter.new(path).import
   end
 
-  
+
   def call
     input = ""
 
@@ -71,7 +71,7 @@ class MusicLibraryController
     puts "Which song number would you like to play?"
     num = gets.strip.to_i - 1
     song = Song.all.sort {|x,y| x.name <=> y.name}[num]
-    if song && num.between?(0, Song.all.length-1) 
+    if song && num.between?(0, Song.all.length-1)
       puts "Playing #{song.name} by #{song.artist.name}"
     end
   end
